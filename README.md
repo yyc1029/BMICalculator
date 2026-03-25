@@ -6,4 +6,4 @@
 3. 輸入身高（公分）
 4. 按下「計算」按鈕
 5. 程式會顯示BMI值和體重狀況
-![sample](./images/sample.png)
+![sample](./images/sample1.png)
