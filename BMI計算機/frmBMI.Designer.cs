@@ -37,6 +37,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblResult = new System.Windows.Forms.Label();
             this.lblBMI = new System.Windows.Forms.Label();
+            this.lblKG = new System.Windows.Forms.Label();
+            this.lblRecommand = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -102,12 +104,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblRecommand);
+            this.groupBox2.Controls.Add(this.lblKG);
             this.groupBox2.Controls.Add(this.lblResult);
             this.groupBox2.Controls.Add(this.lblBMI);
             this.groupBox2.Font = new System.Drawing.Font("微軟正黑體", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox2.Location = new System.Drawing.Point(33, 303);
+            this.groupBox2.Location = new System.Drawing.Point(33, 279);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(742, 110);
+            this.groupBox2.Size = new System.Drawing.Size(742, 159);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "計算結果";
@@ -125,11 +129,30 @@
             // lblBMI
             // 
             this.lblBMI.AutoSize = true;
-            this.lblBMI.Location = new System.Drawing.Point(27, 48);
+            this.lblBMI.Location = new System.Drawing.Point(15, 46);
             this.lblBMI.Name = "lblBMI";
             this.lblBMI.Size = new System.Drawing.Size(246, 34);
             this.lblBMI.TabIndex = 2;
             this.lblBMI.Text = "身體質量指數(BMI)";
+            // 
+            // lblKG
+            // 
+            this.lblKG.AutoSize = true;
+            this.lblKG.Location = new System.Drawing.Point(15, 104);
+            this.lblKG.Name = "lblKG";
+            this.lblKG.Size = new System.Drawing.Size(172, 34);
+            this.lblKG.TabIndex = 4;
+            this.lblKG.Text = "建議體重(kg)";
+            // 
+            // lblRecommand
+            // 
+            this.lblRecommand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRecommand.Location = new System.Drawing.Point(289, 104);
+            this.lblRecommand.Name = "lblRecommand";
+            this.lblRecommand.Size = new System.Drawing.Size(398, 34);
+            this.lblRecommand.TabIndex = 5;
+            this.lblRecommand.Text = "                                                        ";
+            this.lblRecommand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmBMI
             // 
@@ -160,6 +183,8 @@
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.TextBox txtWeight;
+        private System.Windows.Forms.Label lblRecommand;
+        private System.Windows.Forms.Label lblKG;
     }
 }
 

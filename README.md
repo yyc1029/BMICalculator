@@ -6,4 +6,5 @@
 3. 輸入身高（公分）
 4. 按下「計算」按鈕
 5. 程式會顯示BMI值和體重狀況
-![sample](./images/sample1.png)
+6. 下方的建議體重會將根據使用者的身高和BMI值計算出建議的體重範圍
+![sample](./images/recommand.png) 
