@@ -35,16 +35,26 @@
             this.lblWeight = new System.Windows.Forms.Label();
             this.lblHeight = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblRecommand = new System.Windows.Forms.Label();
+            this.lblKG = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
             this.lblBMI = new System.Windows.Forms.Label();
-            this.lblKG = new System.Windows.Forms.Label();
-            this.lblRecommand = new System.Windows.Forms.Label();
+            this.cmbHeight = new System.Windows.Forms.ComboBox();
+            this.cmbWeight = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.picResult = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picResult)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbGender);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cmbWeight);
+            this.groupBox1.Controls.Add(this.cmbHeight);
             this.groupBox1.Controls.Add(this.btnRun);
             this.groupBox1.Controls.Add(this.txtWeight);
             this.groupBox1.Controls.Add(this.txtHeight);
@@ -60,10 +70,10 @@
             // 
             // btnRun
             // 
-            this.btnRun.Location = new System.Drawing.Point(529, 52);
+            this.btnRun.Location = new System.Drawing.Point(536, 48);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(158, 132);
-            this.btnRun.TabIndex = 4;
+            this.btnRun.Size = new System.Drawing.Size(183, 170);
+            this.btnRun.TabIndex = 5;
             this.btnRun.Text = "計算";
             this.btnRun.UseVisualStyleBackColor = true;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
@@ -71,7 +81,7 @@
             // txtWeight
             // 
             this.txtWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtWeight.Location = new System.Drawing.Point(159, 138);
+            this.txtWeight.Location = new System.Drawing.Point(255, 112);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(258, 43);
             this.txtWeight.TabIndex = 3;
@@ -79,28 +89,28 @@
             // txtHeight
             // 
             this.txtHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHeight.Location = new System.Drawing.Point(159, 49);
+            this.txtHeight.Location = new System.Drawing.Point(255, 50);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(258, 43);
-            this.txtHeight.TabIndex = 2;
+            this.txtHeight.TabIndex = 1;
             // 
             // lblWeight
             // 
             this.lblWeight.AutoSize = true;
-            this.lblWeight.Location = new System.Drawing.Point(27, 140);
+            this.lblWeight.Location = new System.Drawing.Point(27, 116);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(118, 34);
+            this.lblWeight.Size = new System.Drawing.Size(69, 34);
             this.lblWeight.TabIndex = 1;
-            this.lblWeight.Text = "體重(kg)";
+            this.lblWeight.Text = "體重";
             // 
             // lblHeight
             // 
             this.lblHeight.AutoSize = true;
             this.lblHeight.Location = new System.Drawing.Point(27, 52);
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(125, 34);
+            this.lblHeight.Size = new System.Drawing.Size(69, 34);
             this.lblHeight.TabIndex = 0;
-            this.lblHeight.Text = "身高(cm)";
+            this.lblHeight.Text = "身高";
             // 
             // groupBox2
             // 
@@ -115,6 +125,25 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "計算結果";
+            // 
+            // lblRecommand
+            // 
+            this.lblRecommand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRecommand.Location = new System.Drawing.Point(289, 104);
+            this.lblRecommand.Name = "lblRecommand";
+            this.lblRecommand.Size = new System.Drawing.Size(398, 34);
+            this.lblRecommand.TabIndex = 5;
+            this.lblRecommand.Text = "                                                        ";
+            this.lblRecommand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblKG
+            // 
+            this.lblKG.AutoSize = true;
+            this.lblKG.Location = new System.Drawing.Point(15, 104);
+            this.lblKG.Name = "lblKG";
+            this.lblKG.Size = new System.Drawing.Size(123, 34);
+            this.lblKG.TabIndex = 4;
+            this.lblKG.Text = "建議體重";
             // 
             // lblResult
             // 
@@ -135,30 +164,66 @@
             this.lblBMI.TabIndex = 2;
             this.lblBMI.Text = "身體質量指數(BMI)";
             // 
-            // lblKG
+            // cmbHeight
             // 
-            this.lblKG.AutoSize = true;
-            this.lblKG.Location = new System.Drawing.Point(15, 104);
-            this.lblKG.Name = "lblKG";
-            this.lblKG.Size = new System.Drawing.Size(172, 34);
-            this.lblKG.TabIndex = 4;
-            this.lblKG.Text = "建議體重(kg)";
+            this.cmbHeight.FormattingEnabled = true;
+            this.cmbHeight.Items.AddRange(new object[] {
+            "公尺",
+            "呎"});
+            this.cmbHeight.Location = new System.Drawing.Point(114, 50);
+            this.cmbHeight.Name = "cmbHeight";
+            this.cmbHeight.Size = new System.Drawing.Size(121, 42);
+            this.cmbHeight.TabIndex = 0;
+            this.cmbHeight.Text = "單位";
             // 
-            // lblRecommand
+            // cmbWeight
             // 
-            this.lblRecommand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRecommand.Location = new System.Drawing.Point(289, 104);
-            this.lblRecommand.Name = "lblRecommand";
-            this.lblRecommand.Size = new System.Drawing.Size(398, 34);
-            this.lblRecommand.TabIndex = 5;
-            this.lblRecommand.Text = "                                                        ";
-            this.lblRecommand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmbWeight.FormattingEnabled = true;
+            this.cmbWeight.Items.AddRange(new object[] {
+            "公斤\t",
+            "磅"});
+            this.cmbWeight.Location = new System.Drawing.Point(114, 113);
+            this.cmbWeight.Name = "cmbWeight";
+            this.cmbWeight.Size = new System.Drawing.Size(121, 42);
+            this.cmbWeight.TabIndex = 2;
+            this.cmbWeight.Text = "單位";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 176);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 34);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "性別";
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "男生\t",
+            "女生"});
+            this.cmbGender.Location = new System.Drawing.Point(114, 176);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(121, 42);
+            this.cmbGender.TabIndex = 4;
+            this.cmbGender.Text = "男/女";
+            // 
+            // picResult
+            // 
+            this.picResult.Location = new System.Drawing.Point(812, 61);
+            this.picResult.Name = "picResult";
+            this.picResult.Size = new System.Drawing.Size(326, 377);
+            this.picResult.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picResult.TabIndex = 2;
+            this.picResult.TabStop = false;
             // 
             // frmBMI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1163, 475);
+            this.Controls.Add(this.picResult);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmBMI";
@@ -168,6 +233,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picResult)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,6 +251,11 @@
         private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.Label lblRecommand;
         private System.Windows.Forms.Label lblKG;
+        private System.Windows.Forms.ComboBox cmbWeight;
+        private System.Windows.Forms.ComboBox cmbHeight;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbGender;
+        private System.Windows.Forms.PictureBox picResult;
     }
 }
 
